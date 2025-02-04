@@ -1,6 +1,4 @@
-#include <iostream>
 #include <string>
-#include <vector>
 #include <windows.h>
 
 #include <GL/Gl.h>
@@ -77,7 +75,6 @@ std::pair<HWND, HDC> createOpenGLWindow(HINSTANCE hInstance, int nCmdShow,
           "wglGetExtensionsStringARB");
 
   std::string extensionsString(wglGetExtensionsStringARB(dummyHdc));
-  std::cout << extensionsString << "\n";
 
   _ASSERTE(extensionsString.find("WGL_ARB_pixel_format") != std::string::npos);
 
